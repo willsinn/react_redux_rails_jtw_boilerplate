@@ -13,7 +13,9 @@ class App extends Component {
 
   handleClick = event => {
     event.preventDefault()
+    // Remove the token from localStorage
     localStorage.removeItem("token")
+    // Remove the user object from the Redux store
     this.props.logoutUser()
   }
 
